@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<head>
+    <title>Tyler Yanke</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class = "container mainbody">
+        <div class = "col-md-3 mainnav">
+            <div class = "spacer">
+            </div>
+            <div class = "title">
+                <p>Tyler Yanke</p>
+            </div>
+            <a class = "Nav" href="{{ url_for('home') }}">
+                <div class = "home-nav" >
+                    Home
+                </div>
+            </a>
+            <a class = "Nav" href="{{ url_for('about') }}">
+                <div class = "about-nav" >
+                    About
+                </div>
+            </a>
+            <a class = "Nav" href="{{ url_for('projects') }}">
+                <div class = "projects-nav" >
+                    Projects
+                </div>
+            </a>
+            <a class = "Nav" href="{{ url_for('cv') }}">
+                <div class = "cv-nav" >
+                    Resume
+                </div>
+            </a>
+        </div>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
